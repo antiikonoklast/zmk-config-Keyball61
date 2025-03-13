@@ -1,16 +1,17 @@
+layout: {zmk_keyboard: keyball61}
 layers:
   QWRT:
-  - $$mdi:keyboard-esc$$
-  - {t: '1', s: '!'}
-  - {t: '2', s: '@'}
-  - {t: '3', s: '#'}
-  - {t: '4', s: $}
+  - '1'
+  - '2'
+  - '3'
+  - '4'
   - {t: '5', s: '%'}
-  - {t: '6', s: ^}
+  - '6'
   - {t: '7', s: '&'}
   - {t: '8', s: '*'}
   - {t: '9', s: (}
   - {t: '0', s: )}
+  - {t: '-', s: _}
   - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:keyboard-tab$$
   - Q
@@ -42,25 +43,25 @@ layers:
   - C
   - V
   - B
-  - PgDn
-  - PgUp
+  - (
+  - )
   - N
   - M
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - $$mdi:apple-keyboard-shift$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - $$mdi:apple-keyboard-control$$
+  - {t: HOME, h: '$$mdi:apple-keyboard-control$$'}
   - $$mdi:apple-keyboard-option$$
   - LEFT WIN
+  - $$mdi:keyboard-esc$$
   - SNIPE
   - {t: '$$mdi:keyboard-space$$', h: MOUSE}
   - SCROLL
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:backspace$$', h: SYM}
   - $$mdi:apple-keyboard-option$$
-  - $$mdi:backspace-reverse-outline$$
+  - {t: END, h: '$$mdi:apple-keyboard-control$$'}
   NUM:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '1', s: '!'}
