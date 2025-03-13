@@ -25,6 +25,51 @@
 };
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        Equal {
+            bindings = <&kp EQUAL>;
+            key-positions = <9 10>;
+            layers = <0>;
+        };
+    };
+
+    macros {
+        a104: a104 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&none>,
+                <&macro_press>,
+                <&kp LS(L) &kp N2 &kp N1 &kp N0 &kp TAB &kp TAB &kp A &kp N1 &kp N0 &kp N4>;
+
+            label = "A104";
+        };
+
+        a106: a106 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&none>,
+                <&macro_press>,
+                <&kp LS(L) &kp N2 &kp N1 &kp N0 &kp TAB &kp TAB &kp A &kp N1 &kp N0 &kp NUMBER_6>;
+
+            label = "A106";
+        };
+
+        a107: a107 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&none>,
+                <&macro_press>,
+                <&kp LS(L) &kp N2 &kp N1 &kp N0 &kp TAB &kp TAB &kp A &kp N1 &kp N0 &kp N7>;
+
+            label = "A107";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -54,11 +99,11 @@
         symbol_layer {
             label = "SYM";
             bindings = <
-&trans  &kp EXCLAMATION  &kp AT_SIGN  &kp HASH      &kp DOLLAR    &kp PERCENT                  &kp CARET       &kp AMPERSAND  &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
-&trans  &trans           &trans       &trans        &trans        &trans                       &trans          &trans         &trans            &trans                &trans                 &trans
-&trans  &trans           &trans       &bt BT_SEL 1  &bt BT_SEL 2  &trans                       &kp MINUS       &kp EQUAL      &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &trans                 &trans
-&trans  &trans           &trans       &trans        &trans        &trans       &trans  &trans  &kp UNDERSCORE  &kp PLUS       &trans            &trans                &trans                 &trans
-&trans  &trans           &trans       &trans        &trans        &trans       &trans  &trans  &trans                                                                 &trans                 &trans
+&trans  &kp EXCLAMATION  &kp AT_SIGN  &kp HASH      &kp DOLLAR    &kp PERCENT                                       &kp CARET       &kp AMPERSAND  &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
+&trans  &trans           &trans       &trans        &trans        &trans                                            &trans          &trans         &trans            &trans                &trans                 &trans
+&trans  &trans           &trans       &bt BT_SEL 1  &bt BT_SEL 2  &trans                                            &kp MINUS       &kp EQUAL      &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &trans                 &trans
+&a104   &a106            &a107        &trans        &trans        &trans       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp UNDERSCORE  &kp PLUS       &trans            &trans                &trans                 &trans
+&trans  &trans           &trans       &trans        &trans        &trans       &trans            &trans             &trans                                                                 &trans                 &trans
             >;
         };
 
