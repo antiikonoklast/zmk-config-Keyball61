@@ -37,7 +37,7 @@ layers:
   - L
   - {t: ;, s: ':'}
   - {t: '''', s: '"'}
-  - $$mdi:apple-keyboard-shift$$
+  - {t: (, h: '$$mdi:apple-keyboard-shift$$'}
   - Z
   - X
   - C
@@ -50,11 +50,11 @@ layers:
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
-  - $$mdi:apple-keyboard-shift$$
+  - {t: ), h: '$$mdi:apple-keyboard-shift$$'}
   - {t: HOME, h: '$$mdi:apple-keyboard-control$$'}
   - $$mdi:apple-keyboard-option$$
   - LEFT WIN
-  - $$mdi:keyboard-esc$$
+  - QWRT
   - MOUSE
   - {t: '$$mdi:backspace-reverse-outline$$', h: SYM}
   - {t: '$$mdi:keyboard-return$$', h: SCROLL}
@@ -281,8 +281,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - COPY
-  - PASTE
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -438,3 +438,7 @@ combos:
 - p: [9, 10]
   k: {t: '=', s: +}
   l: [QWRT]
+- p: [32, 33]
+  k: COPY
+- p: [33, 34]
+  k: PASTE
